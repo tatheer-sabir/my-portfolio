@@ -1,0 +1,184 @@
+/* for the styling of the all the element in html        */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* for  styling the header  */
+header{
+    padding-left: 20px;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #121C3B;
+    color: #00FFFF;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+/* for styling the body  */
+body{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* for styling main class which enclose the menu and content class */
+.main{
+    width: 90%;
+    height: 95vh;
+    border: 0px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* for the atyling of menu class form which we mage the navigation bar  */
+.menu ul{
+    list-style: none;
+    padding: 50px;
+}
+.icon{
+    width: 50px;
+    transition: transform 0.5s ease-in-out;
+    border: 2px solid #00FFFF;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+/* for highlighting the current icon in navigation bar  */
+.current{
+    width: 50px;
+    transition: transform 0.5s ease-in-out;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #D12D1B;
+    padding: 10px;
+}
+.icon:hover{
+    transform: translateY(-5px);
+    background-color: #00FFFF;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+}
+.menu li{
+    padding-top: 30px;
+}
+
+/* for styling the greeting robot */
+.profile{
+    border: 3px solid black;
+    width: 35%;
+}
+
+/* for the animation of the content like all the h tads p tags etc */
+.intro h1, .intro p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* for the styling of the h1 and p tags  */
+.intro h1{
+    color: white;
+    text-shadow: 3px 3px 10px red;
+    font-size: 350%;
+}
+.intro p{
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+
+/* for the styling of thecontent class enclosing the gif and text  */
+.content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* for the styling of the footer  */
+footer{
+    height: 5%;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #121C3B;
+    color: #00FFFF;
+    padding: 5px;
+    margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* For the popup of the cv */
+.open-btn {
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: left;
+    transition: transform 0.5s ease-in-out;
+}
+.open-btn:hover {
+    background-color: #00FFFF;
+    transform: translateY(-5px);
+    color: black;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: lightgrey;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+#modal-toggle {
+    display: none;
+}
+.popup{
+    text-align: center;
+}
+#modal-toggle:checked + .modal {
+    display: flex;
+}
